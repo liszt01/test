@@ -130,7 +130,6 @@ int main(){ //ケッペンの気候区分
             }
         }
     }else{ //森林限界
-        cout<<"E 寒帯です"<<endl;
         cout<<"最暖月平均気温を教えてください"<<endl;
         cin>>warmest_temp;
         
