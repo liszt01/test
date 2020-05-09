@@ -61,14 +61,14 @@ int main(){ //ケッペンの気候区分
     cin>>forest;
     
     if(forest){
-        cout<<"最寒月平均気温を教えてください"<<endl;
+        cout<<"最寒月平均気温[℃]を教えてください"<<endl;
         cin>>coldest_temp;
         
         if(coldest_temp>=18){ //熱帯
             cout<<"A 熱帯です"<<endl;
-            cout<<"年降水量を教えてください"<<endl;
+            cout<<"年降水量[mm]を教えてください"<<endl;
             cin>>annual_precip;
-            cout<<"最小雨月降水量を教えてください"<<endl;
+            cout<<"最小雨月降水量[mm]を教えてください"<<endl;
             cin>>minimum_precip_month;
             
             if(minimum_precip_month>=60){ //熱帯雨林気候
@@ -86,13 +86,13 @@ int main(){ //ケッペンの気候区分
         }else if(coldest_temp>=-3){ //温帯
             int minimum_precip_month2, maximum_precip_month2;
             cout<<"C 温帯です"<<endl;
-            cout<<"夏の最小雨月降水量を教えてください"<<endl;
+            cout<<"夏の最小雨月降水量[mm]を教えてください"<<endl;
             cin>>minimum_precip_month;
-            cout<<"冬の最多雨月降水量を教えてください"<<endl;
+            cout<<"冬の最多雨月降水量[mm]を教えてください"<<endl;
             cin>>maximum_precip_month;
-            cout<<"冬の最小雨月降水量を教えてください"<<endl;
+            cout<<"冬の最小雨月降水量[mm]を教えてください"<<endl;
             cin>>minimum_precip_month2;
-            cout<<"夏の最多雨月降水量を教えてください"<<endl;
+            cout<<"夏の最多雨月降水量[mm]を教えてください"<<endl;
             cin>>maximum_precip_month2;
             
             if(minimum_precip_month*3<=maximum_precip_month){ //最小雨月が夏
@@ -116,9 +116,9 @@ int main(){ //ケッペンの気候区分
         
         }else{ //亜寒帯
             cout<<"D  亜寒帯です"<<endl;
-            cout<<"冬の最小雨月降水量を教えてください"<<endl;
+            cout<<"冬の最小雨月降水量[mm]を教えてください"<<endl;
             cin>>minimum_precip_month;
-            cout<<"夏の最多雨月降水量を教えてください"<<endl;
+            cout<<"夏の最多雨月降水量[mm]を教えてください"<<endl;
             cin>>maximum_precip_month;
             
             if(minimum_precip_month*10<=maximum_precip_month){ //亜寒帯冬季少雨気候
@@ -130,7 +130,7 @@ int main(){ //ケッペンの気候区分
             }
         }
     }else{ //森林限界
-        cout<<"最暖月平均気温を教えてください"<<endl;
+        cout<<"最暖月平均気温[℃]を教えてください"<<endl;
         cin>>warmest_temp;
         
         if(warmest_temp<0){ //氷雪気候
@@ -143,17 +143,17 @@ int main(){ //ケッペンの気候区分
         }else{ //乾燥帯
             int minimum_precip_month2, maximum_precip_month2, annual_temp, dry_limit;
             cout<<"B 乾燥帯です"<<endl;
-            cout<<"夏の最小雨月降水量を教えてください"<<endl;
+            cout<<"夏の最小雨月降水量[mm]を教えてください"<<endl;
             cin>>minimum_precip_month;
-            cout<<"冬の最多雨月降水量を教えてください"<<endl;
+            cout<<"冬の最多雨月降水量[mm]を教えてください"<<endl;
             cin>>maximum_precip_month;
-            cout<<"冬の最小雨月降水量を教えてください"<<endl;
+            cout<<"冬の最小雨月降水量[mm]を教えてください"<<endl;
             cin>>minimum_precip_month2;
-            cout<<"夏の最多雨月降水量を教えてください"<<endl;
+            cout<<"夏の最多雨月降水量[mm]を教えてください"<<endl;
             cin>>maximum_precip_month2;
             
             if(minimum_precip_month*3<=maximum_precip_month){ //夏乾燥
-                cout<<"年平均気温を教えてください"<<endl;
+                cout<<"年平均気温[℃]を教えてください"<<endl;
                 cin>>annual_temp;
                 
                 dry_limit = 20 * annual_temp;
@@ -166,7 +166,7 @@ int main(){ //ケッペンの気候区分
                     return 0;
                 }
             }else if(minimum_precip_month2*10<=maximum_precip_month2){ //冬乾燥
-                cout<<"年平均気温を教えてください"<<endl;
+                cout<<"年平均気温[℃]を教えてください"<<endl;
                 cin>>annual_temp;
                 
                 dry_limit = 20 * (annual_temp+14);
@@ -179,7 +179,7 @@ int main(){ //ケッペンの気候区分
                     return 0;
                 }
             }else{ //乾季なし
-                cout<<"年平均気温を教えてください"<<endl;
+                cout<<"年平均気温[℃]を教えてください"<<endl;
                 cin>>annual_temp;
                 
                 dry_limit = 20 * (annual_temp+7);
